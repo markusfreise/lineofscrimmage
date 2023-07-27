@@ -6,16 +6,20 @@ function df_blocks() {
 
     $blocks = [
         [
-            "slug" => "slider",
-            "name" => "Slider"
+            "slug" => "hero",
+            "name" => "Hero"
         ],
         [
-            "slug" => "zitat",
-            "name" => "Zitat"
+            "slug" => "references",
+            "name" => "Referenzen"
         ],
         [
-            "slug" => "contactform",
-            "name" => "Kontaktformular"
+            "slug" => "title",
+            "name" => "Titel"
+        ],
+        [
+            "slug" => "features",
+            "name" => "Features"
         ],
     ];
 

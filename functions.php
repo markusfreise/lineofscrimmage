@@ -95,5 +95,8 @@ function remove_comment_support() {
     remove_post_type_support( 'page', 'comments' );
 }
 
+if(function_exists('acf_add_options_page')) {
+	acf_add_options_page('Weitere Inhalte');
+}
 
 ?>

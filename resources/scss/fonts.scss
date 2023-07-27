@@ -1,11 +1,32 @@
+$fontname: 'OpenSans';
+
 @font-face {
-    font-family: fontname;
-    src: url(fontname.ttf);
+    font-family: $fontname;
     font-weight: normal;
+    src: url('../fonts/'+$fontname+'-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: fontname;
-    src: url(fontname.ttf);
-    font-weight: normal;
+    font-family: $fontname;
+    font-weight: bold;
+    src: url('../fonts/'+$fontname+'-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: $fontname;
+    font-weight: 900;
+    src: url('../fonts/'+$fontname+'-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: $fontname;
+    font-style: italic;
+    src: url('../fonts/'+$fontname+'-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: $fontname;
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/'+$fontname+'-BoldItalic.ttf') format('truetype');
 }

@@ -1,0 +1,28 @@
+.wp-block-sal-checkboxes {
+    padding: var(--gap);
+    @media(min-width: 768px){
+        padding: var(--gap-2x);
+    }
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #c0d7e1 0%, #c7e8f5 100%);
+    div.check {
+        display: flex;
+        align-items: center;
+        @media(max-width: 767px){
+            flex-direction: column;
+        }
+        h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: var(--gap) 0 0 0;
+            @media(min-width: 768px){
+                margin: 0 0 0 var(--gap);
+            }
+        }
+        margin-bottom: var(--gap);
+        &+div {
+            font-size: pxtoem(16);
+        }
+    }
+}
+

@@ -46,3 +46,21 @@ strong {
 }
 
 @import "blocks.scss";
+
+.upload {
+  position: relative;
+}
+
+.upload.pa1, .is-root-container .wp-block-b-hero .features .feature__image img.upload {
+  position: absolute;
+}
+
+.upload button {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1986;
+  background: white;
+}
+
+/*# sourceMappingURL=editor.css.map*/

@@ -1,0 +1,113 @@
+.wp-block-sal-hero {
+    @extend .capsule;
+    margin-bottom: var(--m-vert);
+    background: url(../images/GradReverse.png) no-repeat;
+    &,
+    .inner {
+    display: flex;
+    flex-direction: row-reverse;
+    @media(min-width: 768px){
+        align-items: flex-end;
+    }
+    @media(max-width: 767px){
+        flex-direction: column;
+    }
+    @media(min-width: 768px){
+        align-items: stretch !important;
+    }
+    background-size: 100% 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: var(--full-width);
+    margin-left: auto;
+    margin-right: auto;
+    .text {
+        flex-shrink: 0;
+        p {
+            font-size: var(--fs-small);
+        }
+        color: white;
+        h2 {
+            @extend .h1;
+            color: white !important;
+            @media(min-width: 1024px){
+                font-size: pxtoem(32);
+            }
+            line-height: 1.2 !important;
+            margin-top: 0 !important;
+            margin-bottom: var(--gap-2x) !important;
+        }
+        @media(min-width: 768px){
+            width: 50%;
+            padding: var(--gap-2x);
+            margin-bottom: 0;
+        }
+        p.more {
+            margin-top: var(--gap-2x);
+        }
+    }
+    .slider-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .slide {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.24s;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    .bild {
+        background-color: rgba(0,0,0,0.24);
+        position: relative;
+        flex-grow: 1;
+        div.triangle {
+            @media(max-width: 767px){
+                display: none;
+            }
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url("../images/TriangleReverse.png") no-repeat;
+            background-size: contain;
+        }
+    }
+}
+}
+
+.pictures {
+    padding: var(--gap);
+    background-color: var(--c-subtle);
+}
+.sortable-list {
+    display: flex;
+    .tile {
+        width: 120px;
+        height: 120px;
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+        background-size: cover;
+        background-color: var(--c-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

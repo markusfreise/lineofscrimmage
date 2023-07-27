@@ -1,11 +1,11 @@
 .content {
-    &:not(.wp-block):first-child {
-        margin-top: var(--m-vert);
+    &>:not(.wp-block):first-child:not(.rich-text) {
+        // margin-top: var(--m-vert);
     }
     @extend .typography;
     ._brlbs-switch-consent,
-    &>.wp-block-columns,
     &>.wrapThis,
+    &>div.wp-block-group,
     &>ul,
     &>ol,
     &>blockquote,
@@ -19,12 +19,13 @@
     &>h5,
     &>h6,
     &>figure {
-        max-width: var(--max-width);
+        max-width: var(--article-width);
         margin-left: auto;
         margin-right: auto;
+        @media(min-width: 768px){
+            margin-left: calc(var(--width-margin) + var(--gap-2x));
+        }
         @media (max-width: 1179px) {
-            padding-left: 2rem;
-            padding-right: 2rem;
         }
     }
     &>ul {
@@ -61,4 +62,12 @@
         margin-bottom: 3rem;
     }
     @import "colors.scss"
+}
+
+.wp-block-column:not(:first-child) {
+    margin-top: var(--gap-2x);
+    @media(min-width: 1024px){
+        margin-top: 0;
+        margin-left: var(--gap-2x);
+    }
 }

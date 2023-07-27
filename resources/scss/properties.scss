@@ -1,34 +1,65 @@
 :root {
-    
+
     // Colours
+
+    --c-corporate: #056083;
+    --c-light: #29B5E4;
+    --c-subtle: #ecf5f8;
+    --c-subtil: #ecf5f8;
     --c-copy: #242424;
-    --c-corporate: #8c7ae6;
-    --c-head: var(--c-corporate);
-    
+    --c-accent: #F59947;
+    --c-akzent: #F59947;
+    --c-weiss: #ffffff;
+    --c-grey: #EDF5F8;
+    --marker-1: rgba(245, 153, 71, .3);
+    --marker-2: rgba(245, 153, 71, .5);
+
     // Fonts
-    --fs-copy: 1rem;
+    @media(min-width: 1024px){
+        --fs-copy: 1.124rem;
+    }
+    --fs-small: #{pxtoem(16)};
     --fs-large: #{pxtoem(19)};
-    --ff-copy: sans-serif;
-    --ff-head: sans-serif;
+    --ff-copy: 'OpenSans', sans-serif;
+    --ff-head: var(--ff-copy);
     --ff-fixed: sans-serif;
-    
+
+    --fw-bold: 400;
+    --fw-extra: 700;
+
 
     // Widths
-    --max-width: calc(100% - 4rem);
+    --max-width: calc(100vw - 4rem);
     --width-margin: 2rem;
+    --full-width: calc(100vw - 4rem);
+    --width-margin-full: var(--width-margin);
+
     @media(min-width: 1280px) {
         --max-width: 1184px;
-        --width-margin: calc(50% - var(--max-width) * 0.5);
+        --width-margin: calc(50vw - var(--max-width) * 0.5);
+        --width-margin-full: calc(50vw - calc(var(--max-width) + 2rem) * 0.5);
     }
-    --article-width: 768px;
+
+    @media(min-width: 1320px) {
+        --max-width: 1280px;
+        --width-margin: calc(50vw - var(--max-width) * 0.5);
+        --width-margin-full: calc(50vw - calc(var(--max-width) + 2rem) * 0.5);
+    }
+
+    --article-width: var(--max-width);
     @media(min-width: 1280px) {
         --article-width: 960px;
     }
+
     --article-width-slim: 960px;
 
     // Margins
-    --m-vert: 106px;
-    --m-vert-slim: 58px;
+    --m-vert: 53px;
+    --m-vert-slim: 29px;
+    @media(min-width: 1024px){
+        --m-vert: 106px;
+        --m-vert-slim: 58px;
+    }
     --gap: #{pxtorem(20)};
     // Calcs
     --m-vert-2x: calc(2 * var(--m-vert));
@@ -37,9 +68,9 @@
     --gap-4x: calc(4 * var(--gap));
     --gap-6x: calc(6 * var(--gap));
     // Radius
-    --radius: #{pxtorem(20)};
-    --radius-small: #{pxtorem(5)};
+    --radius: 0.5rem;
+    --radius-small: 0.35rem;
     // Schatten
     --shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     --shadow-flat: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    }
+}

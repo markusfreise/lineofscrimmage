@@ -1,18 +1,91 @@
 footer {
-    padding: 2em 0;
-    display: flex;
-    justify-content: center;
+    margin-top: var(--m-vert);
     a {
         color: var(--c-copy);
         text-decoration: none;
     }
+    &>div {
+        position: relative;
+        z-index: 24;
+        @media(min-width: 768px){
+            margin: 0 var(--gap-2x);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            border-radius: calc(2* var(--radius));
+        }
+        background: var(--c-corporate);
+        display: grid;
+        overflow: hidden;
+        gap: var(--gap-2x);
+        @media(min-width: 1024px){
+            grid-template-columns: calc(253px + var(--gap-4x) + var(--gap-4x)) 1fr;
+        }
+        .address {
+            background: var(--c-subtil);
+            color: var(--c-copy);
+            font-size: var(--fs-small);
+            p:first-child {
+                margin-bottom: var(--gap-2x);
+            }
+        }
+        &>div {
+            padding: var(--gap-2x);
+            @media(min-width: 768px){
+                padding: var(--gap-4x);
+            }
+            h2,
+            .h2 {
+                line-height: 1.2 !important;
+                color: white !important;
+                font-weight: 900 !important;
+            }
+        }
+        border-bottom: solid 4px var(--c-accent-brown);
+    }
     nav {
+        position: relative;
+        z-index: 19;
+        padding: var(--m-vert) var(--width-margin);
+        margin-top: calc(-1 * var(--m-vert-slim));;
+        background: var(--c-corporate);
+        color: white;
+        .wrap {
+            @media(min-width: 768px){
+                display: flex;
+                justify-content: space-between;        
+            }
+        }
+        a {
+            color: white;
+        }
         ul {
             display: flex;
-            justify-content: center;
-            li {
-                margin: 0 1em;
+            justify-content: flex-end;
+            @media(max-width: 768px){
+                flex-direction: column;
             }
+            li {
+                margin-bottom: 1em;
+                @media(min-width: 768px){
+                    margin: 0 1em;
+                }
+            }
+        }
+        span {
+            @media(min-width: 768px){
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+#wrapall:has(form) {
+    &+footer {
+        &>div {
+            padding: 4em var(--margin);
+        }
+        h2,
+        .form {
+            display: none;
         }
     }
 }

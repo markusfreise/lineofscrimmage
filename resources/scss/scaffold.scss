@@ -22,7 +22,6 @@ body {
 }
 
 .wrap {
-    overflow: hidden;
     width: var(--max-width);
     margin: 0 auto;
     position: relative;
@@ -30,6 +29,12 @@ body {
 
 #wrapall {
     margin: 0 auto;
+}
+
+.capsule {
+    width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
 }
 
 section#content {}

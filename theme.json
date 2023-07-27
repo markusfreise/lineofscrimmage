@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+			"defaultPalette": false,
+            "defaultDuotone": true,
+            "custom": true,
+            "text": true,
+            "background": true,
+            "customDuotone": false,
+            "customGradient": false,
+            "defaultGradients": false,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+                    "palette": [
+            ]
+        }
+   }
+}

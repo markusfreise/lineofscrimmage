@@ -1,3 +1,4 @@
+.ty,
 .typography {
     b,
     strong {
@@ -13,12 +14,22 @@
     }
     .wp-block-quote,
     blockquote {
-        padding: 0;
-        font-size: 1.2em;
-        margin: 2em initial;
+        padding: var(--m-vert-slim) 0 var(--m-vert-slim) 4rem;
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 720px;
         border: none;
-        p:last-child {
+        background: url("../images/Quote.svg") no-repeat 0 calc(0.72rem + var(--m-vert-slim));
+        p:not(:last-child) {
+            margin-top: 0;
+            margin-bottom: var(--gap);
+            color: var(--c-corporate);
+        }
+        cite {
             margin-bottom: 0;
+            font-size: 1rem;
+            opacity: 0.5;
         }
     }
     pre {
@@ -27,14 +38,14 @@
         background: black;
         color: white;
     }
-    color: var(--c-copy);
     dd,
     dt,
     ul,
     ol,
     p {
         margin: 0 0 1em 0;
-        line-height: 1.7;
+        line-height: 1.6;
+        padding: 0;
     }
     .small {
         font-size: 0.75em;
@@ -49,14 +60,15 @@
         margin-bottom: 0;
     }
     ul {
+        li.wp-block-list-item,
         li:not([class]) {
-            margin-top: 10px;
-            &:nth-child {
-                margin: 0;
+            margin-top: 1em;
+            &:first-child {
+                margin-top: 0;
             }
             padding-left: 20px;
             margin-left: 0;
-            background: url("../images/Bullet.svg") no-repeat 0 6px;
+            background: url("../images/Bullet.svg") no-repeat 0 4px;
         }
         ul {
             margin-left: 1em;
@@ -84,9 +96,13 @@
     h5 {
         margin-top: 1em;
         margin-bottom: 1em;
-        line-height: 1.2;
+        line-height: 130%;
+        @media(min-width: 768px){
+            line-height: 140%;
+        }
         font-family: var(--ff-head);
-        font-weight: normal;
+        font-weight: bold;
+        color: var(--c-corporate);
         a {
             text-decoration: none;
             color: var(--c-copy);
@@ -97,16 +113,28 @@
         &:first-child {
             margin-top: 0;
         }
+        em {
+            font-style: normal;
+            background: linear-gradient( 0.3deg, transparent 10% ,var(--marker-1) 10%,var(--marker-1) 72%,transparent 72%, transparent 86%),linear-gradient( transparent 24% ,var(--marker-2) 24%,var(--marker-2) 80%,transparent 80%, transparent 96%);
+        }
     }
     .h1 {
         font-family: var(--ff-head);
-        font-size: 2.5em;
+        font-size: pxtoem(27);
+        @media(min-width: 1024px){
+            font-size: pxtoem(40);
+        }
     }
     h1 {
         @extend .h1;
     }
+    .h2,
     h2 {
-        font-size: 1.5em;
+        font-size: pxtoem(24);
+        hyphens: auto;
+        @media(min-width: 1024px){
+            font-size: pxtoem(32);
+        }
     }
     caption,
     h3 {

@@ -19,4 +19,4 @@ if(is_admin()) {
 
 ?>
 <section  id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
- </section>
+</section>
