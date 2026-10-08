@@ -3,6 +3,8 @@
     ._brlbs-switch-consent,
     &>.wp-block-columns,
     &>.wp-block-file,
+    &>.wp-block-quote,
+    &>.wp-block-buttons,
     &>.wp-block-buttons,
     &>.wrapThis,
     &>div.wp-block-group,
@@ -26,38 +28,9 @@
             padding-right: 2rem;
         }
     }
-    &>ul {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    h2+ul {
-        margin-top: 1em;
-    }
-    &>.wp-block-buttons,
-    &>.wp-block-columns,
-    &>.wp-block-group {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    &>.wp-block-group {
-        margin-bottom: 1em;
-    }
     li {
         background: none;
         padding-left: 0;
-    }
-    .wp-block-columns {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-    .wp-block-group__inner-container {
-        .wp-block-columns {
-            margin-top: 0rem;
-            margin-bottom: 0rem;
-        }
-    }
-    .wp-block-df-block-df-abstract {
-        margin-bottom: 3rem;
     }
     @import "colors.scss"
 }

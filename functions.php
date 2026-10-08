@@ -2,7 +2,7 @@
 
 require_once("lib/designbuero-freise.php");
 require_once("lib/blocks.php");
-require_once("lib/colors.php");
+require_once("lib/colours.php");
 require_once("lib/gutenberg.php");
 
 //require_once("lib/cpt.php");
@@ -95,6 +95,12 @@ function remove_comment_support() {
     remove_post_type_support( 'page', 'comments' );
 }
 
+add_action('admin_menu', 'remove_admin_menu_items');
+
+function remove_admin_menu_items() {
+	remove_menu_page('edit-comments.php');
+}
+
 if(function_exists("acf_add_options_page")) {
 	acf_add_options_page(array(
 		'page_title' => 'Allgemeine Einstellungen',
@@ -116,4 +122,24 @@ header('X-Content-Type-Options: nosniff');
 header('X-Frame-Options: SAMEORIGIN');
 header('X-XSS-Protection: 1; mode=block');
 
+add_action('admin_menu', 'add_quick_edit_homepage_link');
+
+function add_quick_edit_homepage_link()
+{
+
+	$homepage_id = get_option('page_on_front');
+	if ($homepage_id) {
+		$edit_link = admin_url('post.php?post=' . $homepage_id . '&action=edit');
+		add_submenu_page(
+			'nestedpages',
+			'Startseite',           // Page title
+			'Startseite',           // Menu title
+			'edit_pages',                      // Capability
+			$edit_link,                        // Menu slug (the actual edit link)
+			'',                                // Function (empty since we're redirecting)
+			'dashicons-admin-home',            // Icon
+			5                                  // Position (3 = near the top)
+		);
+	}
+}
 ?>

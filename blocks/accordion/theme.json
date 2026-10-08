@@ -1,0 +1,36 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+			"defaultPalette": false,
+            "defaultDuotone": true,
+            "custom": true,
+            "text": true,
+            "background": true,
+            "customDuotone": true,
+            "customGradient": true,
+            "defaultGradients": true,
+            "defaultPalette": true,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+                    "palette": [
+            ]
+        }
+   },
+    "styles": {
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "#b51d1c",
+                    "text": "#fff !important"
+                },
+                ":hover": {
+                    "background": {
+                        "text": "#000 !important"
+                    }
+                }
+            }
+        }
+    }
+}

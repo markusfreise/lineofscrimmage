@@ -73,3 +73,25 @@ h1.wp-block-post-title {
 .wp-block[data-align="full"] {
     max-width: none;
 }
+
+.block-editor-block-list__block::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px dashed red;
+}
+
+.block-editor-block-list__block:hover::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid red;
+}

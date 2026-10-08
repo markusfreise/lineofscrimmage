@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ff/feature",
+	"version": "0.1.0",
+	"title": "Feature",
+	"category": "ff",
+	"icon": "",
+	"description": "Feature",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ff",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

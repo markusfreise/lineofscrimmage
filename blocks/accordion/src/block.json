@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ff/accordion",
+	"version": "0.1.0",
+	"title": "Akkordion",
+	"category": "ff",
+	"description": "Akkordion",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ff",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "All Blocks: start",
+      "type": "shell",
+      "command": "cd $(ls -d ./*-wordpress-theme | head -1) && for dir in blocks/*/; do (cd \"$dir\" && npm run start) & done; wait",
+      "options": {
+        "cwd": "${workspaceFolder}/wp-content/themes"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "blocks"
+      }
+    },
+    {
+      "label": "Theme: mix watch",
+      "type": "shell",
+      "command": "cd $(ls -d ./*-wordpress-theme | head -1) && npx mix watch",
+      "options": {
+        "cwd": "${workspaceFolder}/wp-content/themes"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "theme"
+      }
+    },
+    {
+      "label": "Start All Dev",
+      "dependsOn": [
+        "All Blocks: start",
+        "Theme: mix watch"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}

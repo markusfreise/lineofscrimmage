@@ -1,0 +1,51 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+            "defaultPalette": false,
+            "defaultDuotone": true,
+            "custom": false,
+            "text": true,
+            "background": true,
+            "foreground": true,
+            "color": true
+        } 
+    },
+    "styles": {
+        "elements": {
+            "button": {
+                "spacing": {
+                    "padding": {
+                        "top": "0.64em",
+                        "right": "1.6em",
+                        "bottom": "0.64em",
+                        "left": "1.6em"
+                    }
+                },
+                "color": {
+                    "background": "transparent",
+                    "text": "var(--c-copy)",
+                    "border": "var(--c-copy)"
+                },
+                "typography": {
+                    "fontFamily": "var(--ff-head)",
+                    "textTransform": "uppercase"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "var(--c-copy)",
+                        "text": "white"
+                    },
+                    "border": {
+                        "color": "var(--c-copy)"
+                    }
+                },
+                "border": {
+                    "style": "solid",
+                    "radius": "30em",
+                    "width": "1px"
+                }
+            }
+        }
+    }
+}

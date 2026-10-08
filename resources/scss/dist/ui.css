@@ -1,0 +1,54 @@
+.error404 a.button,
+.error404 .button,
+.search a.button,
+.search .button,
+.block-editor-block-list__block a.button,
+.block-editor-block-list__block .button,
+.home a.button,
+.home .button,
+.post a.button,
+.post .button,
+.page a.button,
+.page .button {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--ff-head);
+  font-size: 1em;
+  padding: 0.6em 1em;
+  background: var(--c-corporate);
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+.error404 a.button svg,
+.error404 .button svg,
+.search a.button svg,
+.search .button svg,
+.block-editor-block-list__block a.button svg,
+.block-editor-block-list__block .button svg,
+.home a.button svg,
+.home .button svg,
+.post a.button svg,
+.post .button svg,
+.page a.button svg,
+.page .button svg {
+  margin-right: 0.5em;
+}
+
+.upload {
+  position: relative;
+}
+.upload button {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5em 1em;
+  border: solid 1px white;
+  border-radius: 0.24em;
+  cursor: pointer;
+}
+.upload button:hover {
+  background: var(--c-copy);
+}

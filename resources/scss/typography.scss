@@ -54,17 +54,15 @@
     ul,
     ol,
     p {
-        margin: 0 0 1em 0;
+        margin-bottom: 1em;
         line-height: 1.7;
     }
     .small {
         font-size: 0.75em;
     }
+    .is-style-abstract,
     .abstract {
-        @media (min-width: 560px) {
-            font-size: var(--fs-large);
-        }
-        font-weight: bold;
+        font-size: var(--fs-large);
     }
     p:last-child {
         margin-bottom: 0;
@@ -113,7 +111,7 @@
         margin-bottom: 1em;
         line-height: 1.2;
         font-family: var(--ff-head);
-        font-weight: normal;
+        font-weight: 900;
         a {
             text-decoration: none;
         }
@@ -121,20 +119,21 @@
             margin-top: 0;
         }
     }
+    .is-style-h1,
     .h1 {
         font-family: var(--ff-head);
         font-size: var(--fs-hl-large);
-        text-transform: uppercase;
     }
     h1 {
         @extend .h1;
     }
+    .is-style-h2,
     .h2,
     h2 {
         font-size: var(--fs-hl-medium);
-        text-transform: uppercase;
     }
     caption,
+    .is-style-h3,
     .h3,
     h3 {
         font-size: var(--fs-hl-small);

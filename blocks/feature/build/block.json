@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gb/feature",
+  "version": "0.1.0",
+  "title": "Feature",
+  "category": "gp",
+  "icon": "",
+  "description": "Pochhammer Feature",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gp",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

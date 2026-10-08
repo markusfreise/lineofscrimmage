@@ -1,0 +1,39 @@
+html {
+  zoom: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html * {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--ff-copy);
+  font-size: var(--fs-copy);
+  -webkit-font-smoothing: antialiased;
+  color: var(--c-copy);
+}
+body.scroll-lock {
+  overflow: hidden;
+}
+
+.wrap {
+  width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrapall {
+  margin: 0 auto;
+}

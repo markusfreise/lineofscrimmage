@@ -8,6 +8,7 @@
     "vue": "^3.4.19"
   },
   "dependencies": {
+    "motion": "^12.40.0",
     "swiper": "^8.4.5"
   }
 }

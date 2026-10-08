@@ -1,0 +1,52 @@
+.wp-block-gb-bild-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-4x);
+    grid-template-areas: "image" "text";
+    margin-left: var(--width-margin);
+    margin-right: var(--width-margin);
+    margin-top: var(--m-vert);
+    margin-bottom: var(--m-vert);
+    @media (min-width: 768px) {
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: "image text";
+        &.reverse {
+            grid-template-columns: 3fr 2fr;
+            grid-template-areas: "text" "image";
+        }
+    }
+    .text {
+        padding: 0.3em 0;
+        @media(min-width: 1280px){
+        }
+        grid-area: text;
+        h2.eyebrow {
+            margin-bottom: 1em;
+        }
+        --fs-large: calc(1 * var(--fs-copy));
+        .wp-block-lw-intro {
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+    &:not(.has-background) {
+        .bild {
+            position: relative;
+            @media(max-width: 767px){
+                max-width: 386px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+            }
+            &__image {
+                position: relative;
+                display: flex;
+                align-items: center
+            }
+            img {
+                @extend .polaroid;
+            }
+        }
+    }
+}

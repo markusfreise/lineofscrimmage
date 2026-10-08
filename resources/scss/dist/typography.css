@@ -1,0 +1,268 @@
+.ty b,
+.ty strong,
+.typography b,
+.typography strong {
+  font-weight: bold;
+}
+.ty i,
+.ty em,
+.typography i,
+.typography em {
+  font-style: italic;
+}
+.ty blockquote,
+.ty pre,
+.typography blockquote,
+.typography pre {
+  padding: 1rem 0;
+}
+.ty .wp-block-quote,
+.ty blockquote,
+.typography .wp-block-quote,
+.typography blockquote {
+  padding: 0;
+  font-size: var(--fs-large);
+  margin: var(--gap-2x) 0;
+  border: none;
+}
+.ty .wp-block-quote p:last-child,
+.ty blockquote p:last-child,
+.typography .wp-block-quote p:last-child,
+.typography blockquote p:last-child {
+  margin-bottom: 0;
+}
+.ty .wp-block-pullquote,
+.typography .wp-block-pullquote {
+  padding: var(--gap-2x);
+  background: var(--c-copy);
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+}
+@media (min-width: 1280px) {
+  .ty .wp-block-pullquote,
+.typography .wp-block-pullquote {
+    transform: translateX(-4em);
+    width: 86%;
+  }
+}
+.ty .wp-block-pullquote blockquote,
+.typography .wp-block-pullquote blockquote {
+  font-size: 1em;
+  margin: 0;
+}
+.ty pre,
+.typography pre {
+  font-family: var(--ff-fixed);
+  line-height: 1.5;
+  background: black;
+  color: white;
+}
+.ty .p,
+.typography .p {
+  font-size: 1em;
+}
+.ty .p,
+.ty dd,
+.ty dt,
+.ty ul,
+.ty ol,
+.ty p,
+.typography .p,
+.typography dd,
+.typography dt,
+.typography ul,
+.typography ol,
+.typography p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+.ty .small,
+.typography .small {
+  font-size: 0.75em;
+}
+.ty .is-style-abstract,
+.ty .abstract,
+.typography .is-style-abstract,
+.typography .abstract {
+  font-size: var(--fs-large);
+}
+.ty p:last-child,
+.typography p:last-child {
+  margin-bottom: 0;
+}
+.ty ul:not(:first-child),
+.typography ul:not(:first-child) {
+  margin-top: var(--gap-2x);
+}
+.ty ul:not(:last-child),
+.typography ul:not(:last-child) {
+  margin-bottom: var(--gap-2x);
+}
+.ty ul li:not([class]),
+.ty ul li.wp-block-list-item,
+.typography ul li:not([class]),
+.typography ul li.wp-block-list-item {
+  padding: 0 0 0 1.2em;
+  margin-left: 0;
+  background: url("../images/Bullet.svg") no-repeat 0 0.4em;
+}
+.ty ul li:not([class]):not(:first-child),
+.ty ul li.wp-block-list-item:not(:first-child),
+.typography ul li:not([class]):not(:first-child),
+.typography ul li.wp-block-list-item:not(:first-child) {
+  margin-top: 1em;
+}
+.ty ul ul,
+.typography ul ul {
+  margin-left: 1em;
+}
+.ty ul li,
+.typography ul li {
+  list-style-type: none;
+}
+.ty ol li,
+.typography ol li {
+  list-style-type: decimal;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+.ty ul,
+.ty ol,
+.typography ul,
+.typography ol {
+  margin: 1em 0;
+  line-height: 1.4;
+}
+.ty caption,
+.ty .h1,
+.ty h1,
+.ty h2,
+.ty h3,
+.ty h4,
+.ty h5,
+.typography caption,
+.typography .h1,
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.2;
+  font-family: var(--ff-head);
+  font-weight: 900;
+}
+.ty caption a,
+.ty .h1 a,
+.ty h1 a,
+.ty h2 a,
+.ty h3 a,
+.ty h4 a,
+.ty h5 a,
+.typography caption a,
+.typography .h1 a,
+.typography h1 a,
+.typography h2 a,
+.typography h3 a,
+.typography h4 a,
+.typography h5 a {
+  text-decoration: none;
+}
+.ty caption:first-child,
+.ty .h1:first-child,
+.ty h1:first-child,
+.ty h2:first-child,
+.ty h3:first-child,
+.ty h4:first-child,
+.ty h5:first-child,
+.typography caption:first-child,
+.typography .h1:first-child,
+.typography h1:first-child,
+.typography h2:first-child,
+.typography h3:first-child,
+.typography h4:first-child,
+.typography h5:first-child {
+  margin-top: 0;
+}
+.ty .is-style-h1,
+.ty .h1,
+.ty h1,
+.typography .is-style-h1,
+.typography .h1,
+.typography h1 {
+  font-family: var(--ff-head);
+  font-size: var(--fs-hl-large);
+}
+.ty .is-style-h2,
+.ty .h2,
+.ty h2,
+.typography .is-style-h2,
+.typography .h2,
+.typography h2 {
+  font-size: var(--fs-hl-medium);
+}
+.ty caption,
+.ty .is-style-h3,
+.ty .h3,
+.ty h3,
+.typography caption,
+.typography .is-style-h3,
+.typography .h3,
+.typography h3 {
+  font-size: var(--fs-hl-small);
+}
+.ty .h4,
+.ty .h5,
+.ty h4,
+.ty h5,
+.typography .h4,
+.typography .h5,
+.typography h4,
+.typography h5 {
+  font-size: 1.2em;
+}
+.ty h1 + *,
+.ty h2 + *,
+.ty h3 + *,
+.ty .coltop + h1,
+.ty .coltop + h2,
+.ty .coltop + h3,
+.ty .coltop + h4,
+.ty .coltop + h5,
+.ty a[name=copytop] + h1,
+.ty a[name=copytop] + h2,
+.ty a[name=copytop] + h3,
+.ty a[name=copytop] + h4,
+.ty a[name=copytop] + h5,
+.typography h1 + *,
+.typography h2 + *,
+.typography h3 + *,
+.typography .coltop + h1,
+.typography .coltop + h2,
+.typography .coltop + h3,
+.typography .coltop + h4,
+.typography .coltop + h5,
+.typography a[name=copytop] + h1,
+.typography a[name=copytop] + h2,
+.typography a[name=copytop] + h3,
+.typography a[name=copytop] + h4,
+.typography a[name=copytop] + h5 {
+  margin-top: 0;
+}
+.ty a:not([class]),
+.typography a:not([class]) {
+  color: var(--c-rot);
+  text-decoration: underline;
+}
+.ty a:not([class]):hover,
+.typography a:not([class]):hover {
+  text-decoration: none;
+}
+.ty .wp-caption p,
+.typography .wp-caption p {
+  font-size: 0.8em;
+  margin: 0.5em 0 1em 0;
+}
